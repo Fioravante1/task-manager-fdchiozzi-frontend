@@ -31,6 +31,7 @@ function ListTasks() {
 
           <TextField
             multiline
+            maxRows={3}
             className={styles.input__tarefa}
             label="Descrição"
             variant="standard"
