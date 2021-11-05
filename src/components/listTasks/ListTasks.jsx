@@ -3,6 +3,7 @@ import React from 'react';
 // import apiGetAllTasks from '../../services/apiRequest';
 import styles from './listTasks.module.css';
 import newDate from '../../helpers/date';
+import MyCalendar from '../calendar/Calendar';
 
 function ListTasks() {
   // const [data, setData] = useState([]);
@@ -18,30 +19,33 @@ function ListTasks() {
   return (
     <>
       <div className={styles.container__list}>
+        <div>
+          <h3>
+            Nova tarefa
+          </h3>
+          <p>{newDate()}</p>
 
-        <h3>
-          Tarefas do dia
-        </h3>
-        <p>{newDate()}</p>
+          <div className={styles.container__newList}>
+            <TextField
+              className={styles.input__tarefa}
+              label="Adicione a tarefa"
+              variant="standard"
+            />
 
-        <div className={styles.container__newList}>
-          <TextField
-            className={styles.input__tarefa}
-            label="Adicione a tarefa"
-            variant="standard"
-          />
+            <TextField
+              multiline
+              maxRows={3}
+              className={styles.input__tarefa}
+              label="Descrição"
+              variant="standard"
+            />
 
-          <TextField
-            multiline
-            maxRows={3}
-            className={styles.input__tarefa}
-            label="Descrição"
-            variant="standard"
-          />
+            <Button className={styles.btn} variant="outlined">Criar tarefa</Button>
 
-          <Button className={styles.btn} variant="outlined">Criar tarefa</Button>
-
+          </div>
         </div>
+
+        <MyCalendar />
 
       </div>
 
