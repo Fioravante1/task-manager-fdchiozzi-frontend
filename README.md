@@ -6,6 +6,9 @@ Essa aplicação tem a proposta de ajudar as pessoas colaboradoras da empresa EB
 Observação: Projeto em andamento.
 
  Api utilizada: [Manager Task FDChiozzi](https://manager-tasks-fdchiozzi.herokuapp.com/tasks)
+ 
+ ## Protótipo do Front-End: [Manager Task FDChiozzi](https://www.figma.com/file/rNLEI3HvKapsI7J1JvlD9r/Untitled?node-id=0%3A1)
+ 
 ## Installation
 
 Clone o projeto
