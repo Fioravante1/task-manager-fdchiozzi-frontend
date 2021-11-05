@@ -1,18 +1,19 @@
 import { Button, TextField } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
-import apiGetAllTasks from '../../services/apiRequest';
+import React from 'react';
+// import apiGetAllTasks from '../../services/apiRequest';
 import styles from './listTasks.module.css';
+import newDate from '../../helpers/date';
 
 function ListTasks() {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
-  useEffect(() => {
-    async function getAll() {
-      const apiResponse = await apiGetAllTasks();
-      setData(apiResponse);
-    }
-    getAll();
-  }, []);
+  // useEffect(() => {
+  //   async function getAll() {
+  //     const apiResponse = await apiGetAllTasks();
+  //     setData(apiResponse);
+  //   }
+  //   getAll();
+  // }, []);
 
   return (
     <>
@@ -21,6 +22,7 @@ function ListTasks() {
         <h3>
           Tarefas do dia
         </h3>
+        <p>{newDate()}</p>
 
         <div className={styles.container__newList}>
           <TextField
@@ -43,13 +45,13 @@ function ListTasks() {
 
       </div>
 
-      <div>
+      {/* <div>
         <p>
           {
           data.map((value) => value.tasks)
         }
         </p>
-      </div>
+      </div> */}
     </>
   );
 }
