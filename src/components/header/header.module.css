@@ -1,0 +1,40 @@
+.container__header {
+  top: 0px;
+  height: 8vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #2C394B;
+}
+
+.avatar {
+  background: #630000;
+  font-weight: bold;
+}
+
+img {
+  width: 150px;
+  height: 30px;
+}
+
+.container__img {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__pesquisar {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input__pesquisar {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: #EEEBDD;
+}

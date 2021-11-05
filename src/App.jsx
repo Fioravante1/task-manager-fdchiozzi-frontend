@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
-import apiGetAllTasks from './services/apiRequest';
+import React from 'react';
+import HomeListTasks from './pages/HomeListTasks';
+import Header from './components/header/Header';
+import styles from './styles/app.module.css';
 
 function App() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    async function getAll() {
-      const apiResponse = await apiGetAllTasks();
-      setData(apiResponse);
-    }
-    getAll();
-  }, []);
-
   return (
-    <p>
-      {data.map((value) => value.task)}
-    </p>
+    <div className={styles.app}>
+      <Header />
+      <HomeListTasks />
+    </div>
   );
 }
 
